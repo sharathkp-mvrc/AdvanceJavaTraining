@@ -1,5 +1,6 @@
 package com.advance.daytwo;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class ReverseString {
@@ -17,6 +18,10 @@ public class ReverseString {
         System.out.println("palindrome");
         else
             System.out.println("not palindrome");
-
+        userDetails();
     }
+    public static void userDetails(){
+        EnpacsClass obj=new EnpacsClass();
+        System.out.println(obj.username+" "+obj.getPassword());
+     }
 }
