@@ -1,0 +1,49 @@
+
+        Set<String> hash_set=new HashSet<String>();
+        hash_set.add("Pappu");
+        hash_set.add("chintu");
+        hash_set.add("Chinu");
+        hash_set.add("Mannu");
+        hash_set.add("Mannu");
+
+        System.out.println(hash_set);
+
+        
+        
+
+
+package com.training.org;
+
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> lst=new ArrayList<String>();
+        lst.add("Anju");
+        lst.add("Tanuja");
+        lst.add("Manish");
+        lst.add("Parimal");
+        lst.add("Eshan");
+
+//        for (String str:lst){
+//            System.out.println(str);
+//        }
+        
+        
+
+    }
+}
+
+
+
+
+
+
+
+https://easyupload.io/4qs267
+    
+    
+
+
+https://gofile.io/d/Wmk92I
+    

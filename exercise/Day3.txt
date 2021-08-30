@@ -1,0 +1,1311 @@
+
+package com.training.org;
+
+abstract class Bank{
+    abstract public int getBankInterest();
+    public void bankMessage(String bankName){
+        System.out.println("bankMessage is called"+bankName);
+    }
+}
+
+class SBI extends Bank{
+       @Override
+    public int getBankInterest() {
+        return 6;
+    }
+}
+
+class AXIS extends Bank{
+    @Override
+    public int getBankInterest() {
+        return 8;
+    }
+}
+
+class ICICI extends Bank{
+
+    @Override
+    public int getBankInterest() {
+        return 7;
+    }
+}
+
+public class BankMainClass {
+    public static void main(String[] args) {
+        Bank b1=new SBI();
+        b1.bankMessage("SBI");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+        b1=new ICICI();
+        b1.bankMessage("ICICI");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+        b1=new AXIS();
+        b1.bankMessage("AXIS");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+
+    }
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+
+abstract class Bank{
+    abstract public int getBankInterest();
+    public void bankMessage(String bankName){
+        System.out.println("bankMessage is called"+bankName);
+    }
+}
+
+class SBI extends Bank{
+       @Override
+    public int getBankInterest() {
+        return 6;
+    }
+}
+
+class AXIS extends Bank{
+    @Override
+    public int getBankInterest() {
+        return 8;
+    }
+}
+
+class ICICI extends Bank{
+
+    @Override
+    public int getBankInterest() {
+        return 7;
+    }
+}
+
+
+public class BankMainClass {
+    public static void main(String[] args) {
+        Bank b1=new SBI();
+        b1.bankMessage("SBI");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+        b1=new ICICI();
+        b1.bankMessage("ICICI");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+        b1=new AXIS();
+        b1.bankMessage("AXIS");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+
+    }
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+
+
+abstract class Bike{
+
+    abstract public void run();
+
+    public void showBikeDetails(){
+        System.out.println("Bike abstract class showBikeDetails is called");
+    }
+}
+
+public class AbstractClassExample extends Bike {
+    @Override
+    public void run() {
+        System.out.println("Run implementation inside AbstactClassExample");
+    }
+
+    public static void main(String[] args) {
+        Bike ab=new AbstractClassExample();
+        ab.run();
+        ab.showBikeDetails();
+
+
+//        AbstractClassExample ab=new AbstractClassExample();
+//        ab.run();
+//        ab.showBikeDetails();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+        Customer cust1=new Customer();
+        System.out.println(cust1);
+
+        
+        
+        
+        
+        Customer cust1=new Customer();
+        System.out.println(cust1);
+
+        Customer cust2=new Customer("regular101","Manish","Bangalore",93454545,new Products("Iphone",98000,new Date()));
+        System.out.println(cust2);
+        
+        
+        
+        
+        
+
+
+package com.training.org;
+
+public class Customer {
+    private String custId;
+    private String custName;
+    private String custAddress;
+    private long mobileNo;
+    private Products product;
+
+    public Customer(){
+        System.out.println("Default constructor of Customer is called");
+        custId="";
+        custName="";
+        custAddress="";
+        mobileNo=0;
+        product=new Products();
+    }
+
+    public Customer(String custId, String custName, String custAddress, long mobileNo,Products product) {
+        System.out.println("Parametrised constructor of Customer is called");
+        this.custId = custId;
+        this.custName = custName;
+        this.custAddress = custAddress;
+        this.mobileNo = mobileNo;
+        this.product=product;
+    }
+
+    public String getCustId() {
+        return custId;
+    }
+
+    public void setCustId(String custId) {
+        this.custId = custId;
+    }
+
+    public String getCustName() {
+        return custName;
+    }
+
+    public void setCustName(String custName) {
+        this.custName = custName;
+    }
+
+    public String getCustAddress() {
+        return custAddress;
+    }
+
+    public void setCustAddress(String custAddress) {
+        this.custAddress = custAddress;
+    }
+
+    public long getMobileNo() {
+        return mobileNo;
+    }
+
+    public void setMobileNo(long mobileNo) {
+        this.mobileNo = mobileNo;
+    }
+
+    public Products getProduct() {
+        return product;
+    }
+
+    public void setProduct(Products product) {
+        this.product = product;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "custId='" + custId + '\'' +
+                ", custName='" + custName + '\'' +
+                ", custAddress='" + custAddress + '\'' +
+                ", mobileNo=" + mobileNo +
+                ", product=" + product +
+                '}';
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+import java.util.Date;
+
+public class Products {
+    private String productName;
+    private double productPrice;
+    private Date manufacturingDate;
+
+    public Products(){
+        System.out.println("Default constuctor of Products is called");
+        productName="";
+        productPrice=0;
+        manufacturingDate=new Date();
+    }
+
+    public Products(String productName, double productPrice, Date manufacturingDate) {
+        System.out.println("Parameterised constuctor of Products is called");
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.manufacturingDate = manufacturingDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Products{" +
+                "productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", manufacturingDate=" + manufacturingDate +
+                '}';
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class MainClass {
+    public static void main(String[] args) {
+        ArrayList<Customer> custRecords=new ArrayList<Customer>();
+
+        custRecords.add(new Customer("cust101","Amrinder","Mumbai",934546565));
+        custRecords.add(new Customer("cust102","Kranti","Chennai",964556765));
+        custRecords.add(new Customer("cust103","Suha","Bangalore",944546565));
+        custRecords.add(new Customer("cust104","Amit","Hyd",564746565));
+        custRecords.add(new Customer("cust105","Pappu","Pune",984546588));
+
+//
+//        for (Customer c1:custRecords){
+//            System.out.println(c1.getCustName());
+//        }
+
+//        Iterator<Customer> iter=custRecords.iterator();
+//        while (iter.hasNext()){
+//            System.out.println(iter.next());
+//        }
+
+
+
+        ArrayList<String> list=new ArrayList<String>();
+        list.add("Pappu");
+        list.add("chintu");
+        list.add("Amit");
+        list.add("Chinki");
+
+        Iterator<String> iter2= list.iterator();
+        while(iter2.hasNext()){
+            String name=iter2.next();
+            if(name.equals("Amit"))
+                iter2.remove();
+        }
+
+        for (String str:list)
+            System.out.println(str);
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+package com.training.org;
+
+public class Customer {
+    private String custId;
+    private String custName;
+    private String custAddress;
+    private long mobileNo;
+
+    public Customer(){
+        System.out.println("Default constructor of Customer is called");
+        custId="";
+        custName="";
+        custAddress="";
+        mobileNo=0;
+    }
+
+    public Customer(String custId, String custName, String custAddress, long mobileNo) {
+        System.out.println("Parametrised constructor of Customer is called");
+        this.custId = custId;
+        this.custName = custName;
+        this.custAddress = custAddress;
+        this.mobileNo = mobileNo;
+    }
+
+    public String getCustId() {
+        return custId;
+    }
+
+    public void setCustId(String custId) {
+        this.custId = custId;
+    }
+
+    public String getCustName() {
+        return custName;
+    }
+
+    public void setCustName(String custName) {
+        this.custName = custName;
+    }
+
+    public String getCustAddress() {
+        return custAddress;
+    }
+
+    public void setCustAddress(String custAddress) {
+        this.custAddress = custAddress;
+    }
+
+    public long getMobileNo() {
+        return mobileNo;
+    }
+
+    public void setMobileNo(long mobileNo) {
+        this.mobileNo = mobileNo;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "custId='" + custId + '\'' +
+                ", custName='" + custName + '\'' +
+                ", custAddress='" + custAddress + '\'' +
+                ", mobileNo=" + mobileNo +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+
+System.out.println("\n\n*********************  e2 ************************");
+        Employee e2=new Employee(101,"Peter",10000,new FamilyDetails(4,"Mark","Anthony"),new Address("Maharashtra","Pune","ABC","TEMP-10002",411011));
+        System.out.println(e2);
+        System.out.println("\n\n*********************  e3 ************************");
+        Employee e3=new Employee(102,"ABC",20000,4,"XYZ","PQR","Maharashtra","Mumbai","Bandra","A-2002",311023);
+        e3.addNewAddress("TEMP STATE","TEMP CITY","TEMP AREA","TEMP BUILD",0000);
+        System.out.println(e3);
+
+
+        
+        
+        
+        
+
+
+package com.training.org;
+
+import java.util.ArrayList;
+
+public class Employee {
+    private int empId;
+    private String empName;
+    private double salary;
+
+    private FamilyDetails familyDetails;  //Contained object
+    private ArrayList<Address> addresses;
+
+
+    public Employee(){
+        System.out.println("Default constructor of Employee is called");
+        empId=0;
+        empName="";
+        salary=0;
+        familyDetails=new FamilyDetails();
+        addresses=new ArrayList<Address>();
+    }
+
+    public Employee(int id, String empName, double salary,FamilyDetails familyDetails,Address address) {
+        System.out.println("Parameterised constructor of Employee is called");
+        empId = id;
+        this.empName = empName;
+        this.salary = salary;
+        this.familyDetails=familyDetails;
+        addresses=new ArrayList<Address>();
+        addresses.add(address);
+    }
+
+    public void addNewAddress(String state, String city, String area, String buildingWithFlatNo, long pinCode){
+        System.out.println("addNewAddress is callled");
+        addresses.add(new Address(state,city,area,buildingWithFlatNo,pinCode));
+    }
+    public Employee(int empId, String empName, double salary, int familyMembers, String fatherName, String surname,String state, String city, String area, String buildingWithFlatNo, long pinCode ) {
+        System.out.println("Parameterised constructor of Employee is called");
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+        this.familyDetails=new FamilyDetails(familyMembers,fatherName,surname);
+
+        this.addresses=new ArrayList<Address>();
+        addresses.add(new Address( state,  city, area,  buildingWithFlatNo,  pinCode));
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    @Override
+    public String toString() {
+        return "\nEmployee DETAILS:- {" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", salary=" + salary +
+                "}\n"+"FAMILY DETAILS:- "+familyDetails.toString() + "\nADDRESS :- "+addresses.toString();
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class Address {
+    private String state;
+    private String city;
+    private String area;
+    private String buildingWithFlatNo;
+    private long pinCode;
+
+    public Address(){
+        System.out.println("Default constructor of Address is called");
+        state="";
+        city="";
+        area="";
+        buildingWithFlatNo="";
+        pinCode=0;
+    }
+
+    public Address(String state, String city, String area, String buildingWithFlatNo, long pinCode) {
+        System.out.println("Parameterised constructor of Address is called");
+        this.state = state;
+        this.city = city;
+        this.area = area;
+        this.buildingWithFlatNo = buildingWithFlatNo;
+        this.pinCode = pinCode;
+    }
+
+    @Override
+    public String toString() {
+        return "\nAddress{" +
+                "state='" + state + '\'' +
+                ", city='" + city + '\'' +
+                ", area='" + area + '\'' +
+                ", buildingWithFlatNo='" + buildingWithFlatNo + '\'' +
+                ", pinCode=" + pinCode +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+******************************************
+
+
+package com.training.org;
+
+public class Address {
+    private String state;
+    private String city;
+    private String area;
+    private String buildingWithFlatNo;
+    private long pinCode;
+
+    public Address(){
+        System.out.println("Default constructor of Address is called");
+        state="";
+        city="";
+        area="";
+        buildingWithFlatNo="";
+        pinCode=0;
+    }
+
+    public Address(String state, String city, String area, String buildingWithFlatNo, long pinCode) {
+        System.out.println("Parameterised constructor of Address is called");
+        this.state = state;
+        this.city = city;
+        this.area = area;
+        this.buildingWithFlatNo = buildingWithFlatNo;
+        this.pinCode = pinCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "state='" + state + '\'' +
+                ", city='" + city + '\'' +
+                ", area='" + area + '\'' +
+                ", buildingWithFlatNo='" + buildingWithFlatNo + '\'' +
+                ", pinCode=" + pinCode +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+
+package com.training.org;
+
+public class FamilyDetails {
+    private int familyMembers;
+    private String fatherName;
+    private String surname;
+
+    public FamilyDetails(){
+        System.out.println("Default constructor of FamilyMembers is called");
+        familyMembers=0;
+        fatherName="";
+        surname="";
+    }
+
+
+    public FamilyDetails(int familyMembers, String fatherName, String surname) {
+        System.out.println("Parameterised constructor of FamilyMembers is called");
+        this.familyMembers = familyMembers;
+        this.fatherName = fatherName;
+        this.surname = surname;
+    }
+
+    @Override
+    public String toString() {
+        return ":- FamilyDetails{" +
+                "familyMembers=" + familyMembers +
+                ", fatherName='" + fatherName + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+
+System.out.println("**************  E1 ******************************* ");
+
+        Employee e1=new Employee();
+        System.out.println(e1);
+
+        System.out.println("**************  E2 ******************************* ");
+        Employee e2=new Employee(101,"Mark",10000,new FamilyDetails(4,"Peter","Anthony"));
+        System.out.println(e2);
+
+        System.out.println("**************  E3 ******************************* ");
+        Employee e3=new Employee(102,"Maria",40000,5,"ABC","XYZ");
+        System.out.println(e3);
+
+        
+        
+        
+        
+
+
+package com.training.org;
+
+public class FamilyDetails {
+    private int familyMembers;
+    private String fatherName;
+    private String surname;
+
+    public FamilyDetails(){
+        System.out.println("Default constructor of FamilyMembers is called");
+        familyMembers=0;
+        fatherName="";
+        surname="";
+    }
+
+
+    public FamilyDetails(int familyMembers, String fatherName, String surname) {
+        System.out.println("Parameterised constructor of FamilyMembers is called");
+        this.familyMembers = familyMembers;
+        this.fatherName = fatherName;
+        this.surname = surname;
+    }
+
+    @Override
+    public String toString() {
+        return ":- FamilyDetails{" +
+                "familyMembers=" + familyMembers +
+                ", fatherName='" + fatherName + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class Employee {
+    private int empId;
+    private String empName;
+    private double salary;
+
+    private FamilyDetails familyDetails;  //Contained object
+
+    public Employee(){
+        System.out.println("Default constructor of Employee is called");
+        empId=0;
+        empName="";
+        salary=0;
+        familyDetails=new FamilyDetails();
+    }
+
+    public Employee(int empId, String empName, double salary,FamilyDetails familyDetails) {
+        System.out.println("Parameterised constructor of Employee is called");
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+        this.familyDetails=familyDetails;
+    }
+
+    public Employee(int empId, String empName, double salary, int familyMembers, String fatherName, String surname ) {
+        System.out.println("Parameterised constructor of Employee is called");
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+        this.familyDetails=new FamilyDetails(familyMembers,fatherName,surname);
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", salary=" + salary +
+                "}\n"+familyDetails.toString();
+    }
+}
+
+
+
+
+
+
+
+
+
+package com.training.org;
+
+public class FamilyDetails {
+    private int familyMembers;
+    private String fatherName;
+    private String surname;
+
+    public FamilyDetails(){
+        System.out.println("Default constructor of FamilyMembers is called");
+        familyMembers=0;
+        fatherName="Peter";
+        surname="Anthony";
+    }
+
+
+    public FamilyDetails(int familyMembers, String fatherName, String surname) {
+        System.out.println("Parameterised constructor of FamilyMembers is called");
+        this.familyMembers = familyMembers;
+        this.fatherName = fatherName;
+        this.surname = surname;
+    }
+
+    @Override
+    public String toString() {
+        return ":- FamilyDetails{" +
+                "familyMembers=" + familyMembers +
+                ", fatherName='" + fatherName + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+https://quizizz.com/join?gc=341457
+    
+    
+    
+
+
+package com.training.org;
+
+public class WageEmployee extends Employee{
+    private String month;
+    private int year;
+    private double noOfWorkingHours;
+    private double wages;
+
+    public WageEmployee(){
+        System.out.println("Default constructor of WageEmployee is called");
+        month="";
+        year=0;
+        noOfWorkingHours=0;
+        wages=0;
+    }
+
+    public WageEmployee(int empId,String name,double salary,String month, int year) {
+        super(empId,name,salary);
+        System.out.println("Parameterised constructor of WageEmployee is called");
+        this.month = month;
+        this.year = year;
+        this.noOfWorkingHours = 0;
+        this.wages = 0;
+    }
+
+    public void calculateSalary(){
+        System.out.println("Calculating of salary of WageEmployee is called");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"WageEmployee{" +
+                "month='" + month + '\'' +
+                ", year=" + year +
+                ", noOfWorkingHours=" + noOfWorkingHours +
+                ", wages=" + wages +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+package com.training.org;
+
+public class MainClass {
+    public static void main(String[] args) {
+
+        SalesEmployee s1=new SalesEmployee(101,"Eshan",10000,5000);
+        s1.calculateSalary();
+        System.out.println(s1);
+
+//        Employee e1=new Employee();
+//        System.out.println(e1);
+//
+//        Employee e4=new Employee(101,"Aman",10000);
+//        System.out.println(e4);
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class SalesEmployee extends Employee {
+    private int sales;
+    private double commission;
+    private double netSalary;
+
+
+    public SalesEmployee(){
+        System.out.println("Default constructor of SalesEmployee is called");
+        sales=0;
+        commission=0;
+        netSalary=0;
+    }
+
+    public SalesEmployee(int id,String name,double sal,int sales) {
+        super(id,name,sal);
+        System.out.println("Parameterised constructor of SalesEmployee is called");
+        this.sales = sales;
+        this.commission = 0;
+        this.netSalary = 0;
+    }
+
+    public void calculateSalary(){
+        if(sales<5000)
+            commission=getSalary()*0.03;
+        else if (sales>=5000 && sales<7000)
+            commission=getSalary()*0.05;
+        else if (sales>=7000 && sales<10000)
+            commission=getSalary()*0.10;
+        else if(sales>=10000)
+            commission=getSalary()*0.15;
+        else
+            System.out.println("Commission is not applicable");
+
+        netSalary=getSalary()+commission;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"\nSalesEmployee{" +
+                "sales=" + sales +
+                ", commission=" + commission +
+                ", netSalary=" + netSalary +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+package com.training.org;
+
+public class MainClass {
+    public static void main(String[] args) {
+
+        SalesEmployee s1=new SalesEmployee(101,"Eshan",10000,5000);
+        System.out.println(s1);
+
+//        Employee e1=new Employee();
+//        System.out.println(e1);
+//
+//        Employee e4=new Employee(101,"Aman",10000);
+//        System.out.println(e4);
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class SalesEmployee extends Employee {
+    private int sales;
+    private double commission;
+    private double netSalary;
+
+
+    public SalesEmployee(){
+        System.out.println("Default constructor of SalesEmployee is called");
+        sales=0;
+        commission=0;
+        netSalary=0;
+    }
+
+    public SalesEmployee(int id,String name,double sal,int sales) {
+        super(id,name,sal);
+        System.out.println("Parameterised constructor of SalesEmployee is called");
+        this.sales = sales;
+        this.commission = 0;
+        this.netSalary = 0;
+    }
+
+
+    @Override
+    public String toString() {
+        return super.toString()+"\nSalesEmployee{" +
+                "sales=" + sales +
+                ", commission=" + commission +
+                ", netSalary=" + netSalary +
+                '}';
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class Employee {
+    private int empId;
+    private String empName;
+    private double salary;
+
+    public Employee(){
+        System.out.println("Default constructor of Employee is called");
+        empId=0;
+        empName="";
+        salary=0;
+    }
+
+    public Employee(int empId, String empName, double salary) {
+        System.out.println("Parameterised constructor of Employee is called");
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.training.org;
+
+public class MainClass {
+    public static void main(String[] args) {
+        Employee e1=new Employee();
+        System.out.println(e1);
+
+        Employee e2=new Employee("Tanish");
+        System.out.println(e2);
+
+        Employee e3=new Employee(101,"Kranti");
+        System.out.println(e3);
+
+        Employee e4=new Employee(101,"Aman",10000);
+        System.out.println(e4);
+
+
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class SalesEmployee extends Employee {
+    private int sales;
+    private double commission;
+    private double netSalary;
+
+
+    public SalesEmployee(){
+        System.out.println("Default constructor of SalesEmployee is called");
+        sales=0;
+        commission=0;
+        netSalary=0;
+    }
+
+    public SalesEmployee(int sales){
+        //super();
+        this.sales=sales;
+    }
+
+    public SalesEmployee(int id,String name,double sal,int sales) {
+       // super(id,name,sal);
+        //super(id);
+        //super(id,name);
+        super("tanish");
+
+
+        System.out.println("Parameterised constructor of SalesEmployee is called");
+        this.sales = sales;
+        this.commission = 0;
+        this.netSalary = 0;
+    }
+    public SalesEmployee(String name,String address){
+        super(name);
+    }
+
+    public SalesEmployee(int id,String name,double sal) {
+        super(id,name,sal);
+        System.out.println("Parameterised constructor of SalesEmployee is called");
+        this.sales = 0;
+        this.commission = 0;
+        this.netSalary = 0;
+    }
+
+
+}
+
+
+
+
+
+
+
+package com.training.org;
+
+public class Employee {
+    private int empId;
+    private String empName;
+    private double salary;
+
+    public Employee(){
+        System.out.println("Default constructor of Employee is called");
+        empId=0;
+        empName="";
+        salary=0;
+    }
+
+    
+    
+    
+    
+    public Employee(int id){
+        this.empId=id;
+    }
+    public Employee(String name){
+        this.empName=name;
+    }
+
+    public Employee(int id,String name){
+        this.empId=id;
+        this.empName=name;
+        this.salary=0;
+    }
+
+    public Employee(int empId, String empName, double salary) {
+        System.out.println("Parameterised constructor of Employee is called");
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class MainClass {
+    public static void main(String[] args) {
+        Employee e1=new Employee();
+        System.out.println(e1);
+
+        Employee e2=new Employee("Tanish");
+        System.out.println(e2);
+
+        Employee e3=new Employee(101,"Kranti");
+        System.out.println(e3);
+
+        Employee e4=new Employee(101,"Aman",10000);
+        System.out.println(e4);
+
+
+    }
+}
+
+
+
+
+
+
+
+package com.training.org;
+
+public class Employee {
+    private int empId;
+    private String empName;
+    private double salary;
+
+    public Employee(){
+        System.out.println("Default constructor of Employee is called");
+        empId=0;
+        empName="";
+        salary=0;
+    }
+
+    public Employee(String name){
+        this.empName=name;
+    }
+
+    public Employee(int id,String name){
+        this.empId=id;
+        this.empName=name;
+        this.salary=0;
+    }
+
+    public Employee(int empId, String empName, double salary) {
+        System.out.println("Parameterised constructor of Employee is called");
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+public class Employee {
+    private int empId;
+    private String empName;
+    private double salary;
+
+    public Employee(){
+        System.out.println("Default constructor of Employee is called");
+        empId=0;
+        empName="";
+        salary=0;
+    }
+    public Employee(int empId, String empName, double salary) {
+        System.out.println("Parameterised constructor of Employee is called");
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+
+public class XYZBank {
+    private String bankName;
+    private String bankAddress;
+    private int noOfEmployees;
+
+    public XYZBank(){
+        System.out.println("Default constructor of XYZBank is called");
+        bankName="";
+        bankAddress="";
+        noOfEmployees=0;
+    }
+
+    public XYZBank(String bankName, String bankAddress, int noOfEmployees) {
+        System.out.println("Parameterised constructor of XYZBank is called");
+        this.bankName = bankName;
+        this.bankAddress = bankAddress;
+        this.noOfEmployees = noOfEmployees;
+    }
+
+    public String toString(){
+        return "Bank Details are "+bankName+" Address "+bankAddress+" NoOfEmployees"+noOfEmployees;
+    }
+}

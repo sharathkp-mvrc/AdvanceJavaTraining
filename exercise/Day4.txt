@@ -1,0 +1,602 @@
+package com.training.org;
+class MyCustomException extends Exception{
+    public MyCustomException(String str){
+        super(str);
+    }
+    public void myMessage(){
+        System.out.println("My message is called");
+    }
+}
+
+public class CustomExceptionClassExample {
+    public static void main(String[] args) {
+        try{
+            throw new MyCustomException("MyCustomMessage");
+        }
+        catch(MyCustomException e){
+            System.out.println(e.getMessage());
+            e.myMessage();
+        }
+    }
+
+}
+
+    
+
+package com.training.org;
+class MyCustomException extends Exception{
+    public MyCustomException(String str){
+        super(str);
+    }
+    public void myMessage(){
+        System.out.println("My message is called");
+    }
+}
+
+public class CustomExceptionClassExample {
+    public static void main(String[] args) {
+        try{
+            throw new MyCustomException("MyCustomMessage");
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+        try{
+            try{
+                try{
+                    int arr[]={10,20,30,40,50};
+                    System.out.println(arr[10]);
+                }
+                catch (ArithmeticException e){
+                    System.out.println(e);
+                }
+            }
+            catch (ArithmeticException e){
+                System.out.println(e);
+            }
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        
+        
+        
+        
+
+
+//outer try block
+        try{
+            try{
+                System.out.println("Going to divide 0");
+                int b=100/0;
+            }
+            catch (ArithmeticException e){
+                System.out.println(e);
+            }
+
+            try{
+                int []arr=new int[5];
+                arr[10]=300;
+            }
+            catch (ArrayIndexOutOfBoundsException e){
+                System.out.println(e);
+            }
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+
+        
+        
+        
+        
+        
+
+
+      try{
+          int arr[]=new int[5];
+          arr[5]=30/0;
+      }
+      catch (ArithmeticException e){
+          System.out.println("Exception 1");
+      }
+      catch (ArrayIndexOutOfBoundsException e){
+          System.out.println("Exception 2");
+      }
+      catch (Exception e){
+          System.out.println("Exception 3");
+      }
+        
+        
+        
+        
+        
+        
+        
+
+
+package com.training.org;
+
+
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+    try {
+
+            int arr[]=new int[5];
+            arr[30]=100;
+
+//        String str="abc";
+//        int i=Integer.parseInt(str);
+//
+//        String str=null;
+//        System.out.println(str.length());
+
+        //  System.out.println(10/0);
+
+//        int arr[] = {1, 2, 3, 4, 5};
+//        for (int i = 0; i <= arr.length; i++) {
+//            System.out.println(arr[i]);
+//        }
+    }
+    catch (Exception e){
+        System.out.println("ERROR:- "+e);
+    }
+
+    System.out.println("Another code after exception");
+
+      //  System.out.println(10/0);
+        //System.out.println("Ending block");
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+
+
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+    try {
+          System.out.println(10/0);
+//        int arr[] = {1, 2, 3, 4, 5};
+//        for (int i = 0; i <= arr.length; i++) {
+//            System.out.println(arr[i]);
+//        }
+    }
+    catch (Exception e){
+        System.out.println("ERROR:- "+e);
+    }
+
+      //  System.out.println(10/0);
+        //System.out.println("Ending block");
+    }
+}
+
+
+
+
+
+
+
+
+Error describes an internal error in the java Runtime environment.
+Describes resource exhaustion in JVM.
+Rare & usually fatal.
+Examples 
+OutOfMemoryError 
+StackOverflowError
+
+
+    
+
+Exception handling is an object oriented way of handling errors.
+Keeps problem solving & error  handling code different.
+Thus, program is less complex.
+Exceptions in Java are actual objects, 
+Exception objects encapsulate the error information.
+Exceptions are created when an abnormal situation arises in java program.
+
+
+
+
+
+
+Exceptions are required to signal serious problems when a program is being executed.
+Exceptions are required to signal some particularly unusual event in program that deserves special attention.s
+Eg: if end of file has been reached, file has been corrupted, file is not found etc.
+
+
+
+
+    
+    
+    
+
+
+package com.training.org;
+class GrandParent{
+    void fun(){
+        System.out.println("GrandParent fun method");
+    }
+}
+
+class Parent1 extends GrandParent{
+    void fun(){
+        System.out.println("Parent1 fun method");
+    }
+}
+
+class Parent2 extends GrandParent{
+    void fun(){
+        System.out.println("Parent2 fun method");
+    }
+}
+public class MethodOverridingExample{
+    public static void main(String[] args) {
+        Parent2 p2=new Parent2();
+        p2.fun();
+    }
+}
+
+
+
+
+
+
+package com.training.org;
+interface AnimalEat{
+    void eat();
+}
+interface AnimalTravel{
+    void travel();
+}
+class Animal implements AnimalEat,AnimalTravel{
+    @Override
+    public void eat() {
+        System.out.println("eat Method from animal is called");
+    }
+
+    @Override
+    public void travel() {
+        System.out.println("travel method from Animal class is called");
+    }
+}
+
+public class InterfaceExample2 {
+    public static void main(String[] args) {
+
+        AnimalTravel a2=new Animal();
+        a2.travel();
+
+        AnimalEat a=new Animal();
+        a.eat();
+
+//        Animal a=new Animal();
+//        a.eat();
+//        a.travel();
+    }
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+interface AnimalEat{
+    void eat();
+}
+interface AnimalTravel{
+    void travel();
+}
+class Animal implements AnimalEat,AnimalTravel{
+    @Override
+    public void eat() {
+        System.out.println("eat Method from animal is called");
+    }
+
+    @Override
+    public void travel() {
+        System.out.println("travel method from Animal class is called");
+    }
+}
+
+public class InterfaceExample2 {
+    public static void main(String[] args) {
+        Animal a=new Animal();
+        a.eat();
+        a.travel();
+    }
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+
+interface Drawable{
+    public void draw();
+}
+
+class Rectangle implements Drawable{
+
+    @Override
+    public void draw() {
+        System.out.println("Draw from Rectangle");
+    }
+}
+
+class Circle implements Drawable{
+    @Override
+    public void draw() {
+        System.out.println("Draw from Circle");
+    }
+}
+
+
+
+public class InterfaceExample {
+    public static void main(String[] args) {
+        Drawable d1=new Rectangle();
+        d1.draw();
+
+        d1=new Circle();
+        d1.draw();
+
+    }
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+
+public class MethodOverloadingExample {
+    public void add(){}
+    public void add(int a,int b){}
+    public void add(int a,int b,int c){}
+
+    public void add(float a,float b){}
+    public void add(double a,double b){}
+
+    public void add(int a,double b){}
+    public void add(double a,int b){}
+
+    //public int add(double a,int b){}  ///NOT allowed
+
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+abstract class Shape{
+    private String color;
+    abstract public double area();  //abstract method
+    public Shape(String color){
+        System.out.println("Parameterised constructor of Shape is called");
+        this.color=color;
+    }
+
+    public String getColor(){
+        return color;
+    }
+}
+
+
+class Circle extends Shape{
+
+    private double radius;
+    public Circle(String color,double radius){
+        super(color);
+        System.out.println("Parameterised constructor of Circle is called");
+        this.radius=radius;
+    }
+
+    @Override
+    public double area() {
+        return Math.PI*Math.pow(radius,2);
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
+    }
+}
+
+class Rectangle extends Shape{
+    private double length;
+    private double width;
+
+    public Rectangle(String color,double length,double width) {
+        super(color);
+        System.out.println("Parameterised constructor of Rectangle is called");
+        this.length=length;
+        this.width=width;
+    }
+
+    @Override
+    public double area() {
+        return length*width;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                '}';
+    }
+}
+
+
+public class AbstractExample {
+    public static void main(String[] args) {
+        Shape s1=new Circle("RED",2.2);
+        System.out.println("AREA OF CIRCLE:- "+s1.area());
+        System.out.println(s1);
+        System.out.println("************************************");
+        s1=new Rectangle("Blue",2,4);
+        System.out.println("AREA OF Rentangle:- "+s1.area());
+        System.out.println(s1);
+
+
+    }
+}
+
+
+
+
+
+
+
+
+package com.training.org;
+abstract class Shape{
+    private String color;
+    abstract public double area();  //abstract method
+    public Shape(String color){
+        System.out.println("Default constructor of Shape is called");
+        this.color=color;
+    }
+
+    public String getColor(){
+        return color;
+    }
+}
+
+
+class Circle extends Shape{
+
+    private double radius;
+    public Circle(String color,double radius){
+        super(color);
+        System.out.println("Default constructor of Circle is called");
+        this.radius=radius;
+    }
+
+    @Override
+    public double area() {
+        return Math.PI*Math.pow(radius,2);
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
+    }
+}
+
+public class AbstractExample {
+    public static void main(String[] args) {
+        Shape s1=new Circle("RED",2.2);
+        System.out.println("AREA OF CIRCLE:- "+s1.area());
+        System.out.println(s1);
+    }
+}
+
+
+
+
+
+
+
+
+
+package com.training.org;
+
+abstract class Bank{
+    abstract public int getBankInterest();
+    public void bankMessage(String bankName){
+        System.out.println("bankMessage is called"+bankName);
+    }
+}
+
+class SBI extends Bank{
+       @Override
+    public int getBankInterest() {
+        return 6;
+    }
+}
+
+class AXIS extends Bank{
+    @Override
+    public int getBankInterest() {
+        return 8;
+    }
+}
+
+class ICICI extends Bank{
+
+    @Override
+    public int getBankInterest() {
+        return 7;
+    }
+}
+
+public class BankMainClass {
+    public static void main(String[] args) {
+        Bank b1=new SBI();
+        b1.bankMessage("SBI");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+        b1=new ICICI();
+        b1.bankMessage("ICICI");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+        b1=new AXIS();
+        b1.bankMessage("AXIS");
+        System.out.println("Bank Interst"+b1.getBankInterest());
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+DAY 1 :- https://codebunk.com/b/9751100331778/
+DAY 2 :- https://codebunk.com/b/6021100332474/
+DAY 3 :- https://codebunk.com/b/6271100333256/
+DAY 4 :- https://codebunk.com/b/6001100334089/

@@ -1,0 +1,204 @@
+1] Accept two numbers and do swapping without using third variable
+2] Accept a four digit number and print 
+   4567
+   4000+500+60+7 = 4567
+   Addition of digits = 22 
+3] WAP to accept 5 subject marks from user and print average and find the grades
+4] Accept a number and check is it single digit ,two digits ,three digits ,four digit or more than 4 digits
+5] 
+    WAP to accept order details from user if order amount is greater than Rs.1500/- then apply discount of 15% on total amount
+eg.
+   Enter quantity of laptops (Rs.300)
+   4
+   Enter Quantity of USB (Rs.50)
+   0
+   Enter Quantities of Keyboard(Rs.20)
+   4
+   
+Total Amount :- 
+Discount is applicable? :- true or false
+discount:- 
+
+After discount amount:- 
+
+
+    
+    
+    
+    
+    
+    
+
+
+1] Accept two numbers and do swapping without using third variable
+2] Accept a four digit number and print 
+   4567
+   4000+500+60+7 = 4567
+   Addition of digits = 22 
+3] WAP to accept 5 subject marks from user and print average and find the grades
+    
+    
+    
+    
+    
+    
+
+Scanner scanner=new Scanner(System.in);
+
+        System.out.println("Enter value for the first number");
+        int num1=scanner.nextInt();
+
+        System.out.println("Enter value for the second number");
+        int num2=scanner.nextInt();
+
+        if(num1>num2)
+            System.out.println("Num1 is greater than num2");
+        else
+            System.out.println("Num1 is smaller than num2");
+
+            
+            
+            
+            
+
+
+package com.training.org;
+
+import java.util.Scanner;
+
+public class IfConditionExample {
+    public static void main(String[] args) {
+
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter value for temp");
+        int temp=scanner.nextInt();
+
+
+        if(temp==100)
+            System.out.println("TEmp is 100");
+        else
+            System.out.println("Temp is not 100");
+
+    }
+}
+
+
+
+
+
+
+
+
+1] Accept two numbers and do swapping without using third variable
+2] Accept a four digit number and print 
+   4567
+   4000+500+60+7 = 4567
+   Addition of digits = 22 
+
+    
+    
+    
+    kj
+
+
+String message=JOptionPane.showInputDialog(null,"Broccoli is good for health","Green Food",JOptionPane.INFORMATION_MESSAGE);
+                String [] options={"ABC","PQR"};
+                ImageIcon icon=new ImageIcon("");
+                String res=(String)JOptionPane.showInputDialog(null,"Do you want more options","message",JOptionPane.QUESTION_MESSAGE,icon,options,options[0]);
+
+
+                
+                
+                
+                
+
+
+//3rd way to accept value GUI
+                int id=Integer.parseInt(JOptionPane.showInputDialog("Enter id here"));
+                System.out.println("ID is "+id);
+
+                String name= JOptionPane.showInputDialog("Enter name here");
+                System.out.println("Name is "+name);
+
+                double salary=Double.parseDouble(JOptionPane.showInputDialog("Enter salary here"));
+                System.out.println("Salary is "+salary);
+
+                
+                
+                
+                
+                
+
+
+//2nd way to accept values from user [new way to accpet]
+
+            Scanner scanner=new Scanner(System.in);
+            System.out.println("Enter id");
+            int id=scanner.nextInt();
+
+            System.out.println("Enter name");
+            String name=scanner.next();
+
+            System.out.println("Enter salary");
+            double salary=scanner.nextDouble();
+
+
+        System.out.println("Details are "+id+" Name "+name+" Salary"+salary);
+
+
+
+
+        
+        
+        
+        
+        
+
+
+System.out.println("Enter id");
+            int id=Integer.parseInt(reader.readLine());
+
+            System.out.println("Enter your name");
+            String name=reader.readLine();
+
+            System.out.println("Enter salary");
+            double salary=Double.parseDouble(reader.readLine());
+
+
+            
+            
+            
+
+
+//1st way to accept values from user [old way]
+            BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Enter your name");
+            String name=reader.readLine();
+
+            System.out.println("Enter your age");
+            int age=Integer.parseInt(reader.readLine());
+
+            System.out.println("Enter empId");
+            int id=Integer.parseInt(reader.readLine());
+
+            System.out.println("Details are "+name+" AGE "+age+" ID"+id);
+            
+            
+            
+            
+
+
+
+https://quizizz.com/join?gc=150717
+    
+    
+    
+
+
+public class Welcome{
+
+	public static void main(String args[]){
+				System.out.println("Welcome to JAVA application")
+	}
+
+}
